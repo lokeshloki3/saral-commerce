@@ -1,0 +1,15 @@
+# Your wrangler.toml file should look something like this:
+name = "saral-commerce"
+compatibility_date = "2025-04-05"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
+
+# WARNING: When running a production build locally using Wrangler, be aware that the .env file may be omitted. Therefore, ensure that you have the same environment variables in your wrangler.toml file.
+# However, you don't have to include Drizzle environment unless you want to access `drizzle-kit` commands in the deployed code.
+[vars]
+
+[[d1_databases]]
+binding = "DB" # i.e. available in your Worker on env.DB
+database_name = "commerce" # When you create your D1 DB, you choose the name
+database_id = "77227c2b-0523-4987-ae8b-64462c684d6b"
+preview_database_id = "77227c2b-0523-4987-ae8b-64462c684d6b"
